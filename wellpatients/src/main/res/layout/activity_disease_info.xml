@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.zero.library.base.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabone"
+                style="@style/lable_health"
+                android:text="心脑血管疾病"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_diabetes"
+                        style="@style/multi_checkbox_health"
+                        android:text="糖尿病"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_hypertension"
+                        style="@style/multi_checkbox_health"
+                        android:text="高血压"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_bloodfat"
+                        style="@style/multi_checkbox_health"
+                        android:text="高血脂"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_heartdisease"
+                        style="@style/multi_checkbox_health"
+                        android:text="冠心病"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_congenitalheartdisease"
+                        style="@style/multi_checkbox_health"
+                        android:text="先天性心脏病"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_ischemicheartdisease"
+                        style="@style/multi_checkbox_health"
+                        android:text="缺血性心脏病"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_rheumatismheartdisease"
+                        style="@style/multi_checkbox_health"
+                        android:text="风湿类心脏病"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_svt"
+                        style="@style/multi_checkbox_health"
+                        android:text="室上性心动过速"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_valvulardisease"
+                        style="@style/multi_checkbox_health"
+                        android:text="瓣膜病"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_obesity"
+                        style="@style/multi_checkbox_health"
+                        android:text="肥胖症"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_myocarditis"
+                        style="@style/multi_checkbox_health"
+                        android:text="心肌炎"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_cerebralapoplexy"
+                        style="@style/multi_checkbox_health"
+                        android:text="脑卒中"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_miocardial"
+                        style="@style/multi_checkbox_health"
+                        android:text="心梗"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_beats"
+                        style="@style/multi_checkbox_health"
+                        android:text="早搏"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_atrialfibrillation"
+                        style="@style/multi_checkbox_health"
+                        android:text="心房颤动"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="其他心血管疾病"/>
+
+                    <EditText
+                        android:id="@+id/et_othercardiovascular"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabtwo"
+                style="@style/lable_health"
+                android:text="呼吸系统疾病"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_tuberculosis"
+                        style="@style/multi_checkbox_health"
+                        android:text="结核"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_pulmonarynodules"
+                        style="@style/multi_checkbox_health"
+                        android:text="肺部结节"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="其他呼吸系统疾病"/>
+
+                    <EditText
+                        android:id="@+id/et_otherrespiratory"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabthree"
+                style="@style/lable_health"
+                android:text="消化系统疾病"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_gastriculcer"
+                        style="@style/multi_checkbox_health"
+                        android:text="胃溃疡"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_helicobacter"
+                        style="@style/multi_checkbox_health"
+                        android:text="幽门螺旋杆菌感染"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_gastricpolyp"
+                        style="@style/multi_checkbox_health"
+                        android:text="胃息肉"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_atrophicgastritis"
+                        style="@style/multi_checkbox_health"
+                        android:text="萎缩性胃炎"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_intestinalpolyp"
+                        style="@style/multi_checkbox_health"
+                        android:text="肠息肉"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_hepatitis"
+                        style="@style/multi_checkbox_health"
+                        android:text="肝炎（型）"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_ulcerativecolitis"
+                        style="@style/multi_checkbox_health"
+                        android:text="溃疡性结肠炎"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="其它消化系统疾病"/>
+
+                    <EditText
+                        android:id="@+id/et_otherdigestion"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabfour"
+                style="@style/lable_health"
+                android:text="肾脏疾病"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_nephritis"
+                        style="@style/multi_checkbox_health"
+                        android:text="肾炎"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_renalcysts"
+                        style="@style/multi_checkbox_health"
+                        android:text="肾脏囊肿或错构瘤"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="其他肾脏疾病 "/>
+
+                    <EditText
+                        android:id="@+id/et_otherkidney"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabfive"
+                style="@style/lable_health"
+                android:text="生殖系统疾病"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_cervical"
+                        style="@style/multi_checkbox_health"
+                        android:text="宫颈肥大"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_hyperplasiacervical"
+                        style="@style/multi_checkbox_health"
+                        android:text="宫颈不典型增生"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_hysteromyoma"
+                        style="@style/multi_checkbox_health"
+                        android:text="子宫肌瘤"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_hpv"
+                        style="@style/multi_checkbox_health"
+                        android:text="HPV感染"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_prostatic"
+                        style="@style/multi_checkbox_health"
+                        android:text="前列腺增生"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_prostatitis"
+                        style="@style/multi_checkbox_health"
+                        android:text="前列腺炎"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_prostaticnodule"
+                        style="@style/multi_checkbox_health"
+                        android:text="前列腺结节"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="其他生殖系统疾病"/>
+
+                    <EditText
+                        android:id="@+id/et_otherreproductive"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabsix"
+                style="@style/lable_health"
+                android:text="乳腺疾病"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_mastopathy"
+                        style="@style/multi_checkbox_health"
+                        android:text="乳腺囊性增生"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_masthyperplasia"
+                        style="@style/multi_checkbox_health"
+                        android:text="乳腺单纯增生"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_adenofibroma"
+                        style="@style/multi_checkbox_health"
+                        android:text="乳腺纤维瘤"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="其他乳腺疾病"/>
+
+                    <EditText
+                        android:id="@+id/et_otherbreast"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabseven"
+                style="@style/lable_health"
+                android:text="药物过敏史"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_drugallergy"
+                        style="@style/multi_checkbox_health"
+                        android:text="对某些药物过敏"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="过敏药物名称"/>
+
+                    <EditText
+                        android:id="@+id/et_drugname"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabeight"
+                style="@style/lable_health"
+                android:text="手术史"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_surgery"
+                        style="@style/multi_checkbox_health"
+                        android:text="一年内是否做过手术"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="手术名称"/>
+
+                    <EditText
+                        android:id="@+id/et_surgeryname"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

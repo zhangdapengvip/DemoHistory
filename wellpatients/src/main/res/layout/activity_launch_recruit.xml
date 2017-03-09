@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.zero.library.base.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_color_normal"
+                android:padding="@dimen/dimen_5"
+                android:text="【基本信息】"
+                android:textSize="@dimen/text_18"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="需要受试者类型:"/>
+
+                <com.zero.library.base.view.AppSpinner
+                    android:id="@+id/as_base_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="性别:"/>
+
+                <com.zero.library.base.view.AppSpinner
+                    android:id="@+id/as_base_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="婚姻状况:"/>
+
+                <com.zero.library.base.view.AppSpinner
+                    android:id="@+id/as_base_marriage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="药物适应症:"/>
+
+                <EditText
+                    android:id="@+id/et_base_indication"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请输入药物适应症"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="试验开始时间:"/>
+
+                <TextView
+                    android:id="@+id/tv_base_starttime"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请选择试验开始时间"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="试验截止时间:"/>
+
+                <TextView
+                    android:id="@+id/tv_base_endtime"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请选择试验截止时间"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_color_normal"
+                android:padding="@dimen/dimen_5"
+                android:text="【实验描述】"
+                android:textSize="@dimen/text_18"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="试验目的:"/>
+
+                <EditText
+                    android:id="@+id/et_test_objective"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请输入试验目的"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="试验分类:"/>
+
+                <com.zero.library.base.view.AppSpinner
+                    android:id="@+id/as_test_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="设计类型:"/>
+
+                <EditText
+                    android:id="@+id/et_test_type"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请输入设计类型"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="试验人数:"/>
+
+                <EditText
+                    android:id="@+id/et_test_number"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请输入试验人数"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="试验方法:"/>
+
+                <EditText
+                    android:id="@+id/et_test_method"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请输入试验方法"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_color_normal"
+                android:padding="@dimen/dimen_5"
+                android:text="【入选标准】"
+                android:textSize="@dimen/text_18"/>
+
+            <EditText
+                android:id="@+id/et_join_criteria"
+                style="@style/edittext_normal_padding"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/bg_edittext_line_2"
+                android:hint="请输入入选标准"
+                android:maxLines="3"
+                android:minLines="3"/>
+
+            <TextView
+                style="@style/text_color_normal"
+                android:padding="@dimen/dimen_5"
+                android:text="【排除标准】"
+                android:textSize="@dimen/text_18"/>
+
+            <EditText
+                android:id="@+id/et_unjoin_criteria"
+                style="@style/edittext_normal_padding"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/bg_edittext_line_2"
+                android:hint="请输入排除标准"
+                android:maxLines="3"
+                android:minLines="3"/>
+
+            <TextView
+                style="@style/text_color_normal"
+                android:padding="@dimen/dimen_5"
+                android:text="【研究相关信息】"
+                android:textSize="@dimen/text_18"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="研究发起机构:"/>
+
+                <EditText
+                    android:id="@+id/et_relevant_organization"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请输入研究发起机构"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="研究发起者姓名:"/>
+
+                <EditText
+                    android:id="@+id/et_relevant_name"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请输入研究发起者姓名"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dimen_3">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:gravity="right"
+                    android:minEms="7"
+                    android:text="联系方式:"/>
+
+                <EditText
+                    android:id="@+id/et_relevant_contactway"
+                    style="@style/edittext_normal_padding"
+                    android:background="@drawable/bg_edittext_line_2"
+                    android:hint="请输入联系方式"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_commit"
+                style="@style/btn_normal_largesize"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/bg_btn_normal"
+                android:text="@string/commit"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="itemInfo"
+            type="com.healthsoulmate.zkl.forum.protocol.response.DiscuzsectionPageResponse.ListBean"/>
+
+        <variable
+            name="imgInfo"
+            type="com.zero.library.base.utils.binding.ImgBinding"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_55"
+            android:layout_height="@dimen/dimen_55"
+            android:layout_margin="@dimen/dimen_10"
+            app:imageRound="@{imgInfo}"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/text_normal"
+                android:text="@{itemInfo.sectionname}"
+                android:textSize="@dimen/text_18"
+                tools:text="娱乐八卦"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_normal"
+                    android:text="@{@string/format_main_count(itemInfo.postsNum)}"
+                    android:textColor="@color/bg_text_lable"
+                    tools:text="@string/format_main_count"/>
+
+                <TextView
+                    style="@style/text_normal"
+                    android:layout_marginLeft="@dimen/dimen_20"
+                    android:text="@{@string/format_reply_count(itemInfo.subPostsNum)}"
+                    android:textColor="@color/bg_text_lable"
+                    tools:text="@string/format_reply_count"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_attention"
+            android:layout_width="@dimen/dimen_25"
+            android:layout_height="@dimen/dimen_25"
+            android:layout_margin="@dimen/dimen_10"
+            android:background="@drawable/ic_attention_normal"/>
+    </LinearLayout>
+</layout>

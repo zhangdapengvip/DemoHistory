@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <com.zero.library.base.view.TitleBarView
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <com.zero.library.base.view.Indicator.TabPageIndicator
+            android:id="@+id/tab_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.zero.library.base.view.CustomViewPager
+            android:id="@+id/forum_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</layout>

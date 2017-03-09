@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- app color -->
+    <color name="app_background_color">#f7f7f7</color>
+    <!--<color name="color_titlebar">#00a0e9</color>-->
+    <color name="color_titlebar">@color/white</color>
+
+    <!-- Default Title Bar -->
+    <color name="title_text_color">#00A2EB</color>
+    <color name="title_text_left">#00A2EB</color>
+    <!-- Default -->
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray_33">#333</color>
+    <color name="gray_44">#444</color>
+    <color name="gray_55">#555</color>
+    <color name="gray_66">#666</color>
+    <color name="gray_77">#777</color>
+    <color name="gray_88">#888</color>
+    <color name="gray_99">#999</color>
+    <color name="gray_A0">#A0A0A0</color>
+    <color name="gray_B0">#B0B0B0</color>
+    <color name="gray_C0">#C0C0C0</color>
+    <color name="gray_D0">#D0D0D0</color>
+    <color name="gray_E0">#E0E0E0</color>
+    <color name="gray_F0">#F0F0F0</color>
+    <color name="red_88">#880000</color>
+    <color name="red_AA">#AA0000</color>
+    <color name="red_FF">#FF0000</color>
+    <color name="green_88">#008800</color>
+    <color name="green_BB">#00BB00</color>
+    <!-- alert dialog -->
+    <color name="default_alert_dlg_title_color">#000000</color>
+    <color name="default_alert_dlg_msg_color">#333333</color>
+    <color name="default_dlg_split_line_color">#333333</color>
+    <dimen name="default_alert_dlg_title_size">20sp</dimen>
+    <dimen name="default_alert_dlg_msg_size">16sp</dimen>
+    <dimen name="default_alert_dlg_btn_size">18sp</dimen>
+
+    <!-- UnderLine Indicator Default -->
+    <bool name="default_underline_indicator_fades">false</bool>
+    <integer name="default_underline_indicator_fade_delay">300</integer>
+    <integer name="default_underline_indicator_fade_length">400</integer>
+    <color name="default_underline_indicator_selected_color">#FF33B5E5</color>
+
+    <!-- Defaulf Indicator -->
+    <color name="bg_tab_pressed">#6633b5e5</color>
+    <bool name="default_circle_indicator_centered">true</bool>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <bool name="default_circle_indicator_snap">false</bool>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+
+    <!-- loadingpager background -->
+    <color name="bg_on_loading">#ffebebeb</color>
+    <!-- bottom menu text color -->
+    <color name="photo_menu_textcolor">#0077FF</color>
+    <!-- wheel city line -->
+    <color name="province_line_border">#C7C7C7</color>
+    <!-- question item -->
+    <color name="question_item">#7AF4C4</color>
+    <!-- zxing -->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawableTop="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/tab_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@android:color/transparent"/>
+
+        <include layout="@layout/include_line_simple"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/tabs_group"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/tab_home"
+                    style="@style/home_radiobutton"
+                    android:checked="true"
+                    android:drawableTop="@drawable/selector_tab_home"
+                    android:text="@string/tab_home"
+                    android:textColor="@color/selector_hometab_text_color"/>
+
+                <RadioButton
+                    android:id="@+id/tab_forum"
+                    style="@style/home_radiobutton"
+                    android:drawableTop="@drawable/selector_tab_forum"
+                    android:text="@string/tab_forum"
+                    android:textColor="@color/selector_hometab_text_color"/>
+
+                <RadioButton
+                    android:id="@+id/tab_find"
+                    style="@style/home_radiobutton"
+                    android:drawableTop="@drawable/selector_tab_find"
+                    android:text="@string/tab_find"
+                    android:textColor="@color/selector_hometab_text_color"/>
+
+                <RadioButton
+                    android:id="@+id/tab_shopping"
+                    style="@style/home_radiobutton"
+                    android:drawableTop="@drawable/selector_tab_shopping"
+                    android:text="@string/tab_shopping_cart"
+                    android:textColor="@color/selector_hometab_text_color"/>
+
+                <RadioButton
+                    android:id="@+id/tab_mine"
+                    style="@style/home_radiobutton"
+                    android:drawableTop="@drawable/selector_tab_mine"
+                    android:text="@string/tab_mine"
+                    android:textColor="@color/selector_hometab_text_color"/>
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_3"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tv_cart_count"
+                    style="@style/text_normal"
+                    android:layout_height="@dimen/text_14"
+                    android:layout_alignRight="@id/tab_shopping"
+                    android:background="@drawable/bg_red_dot"
+                    android:minEms="1"
+                    android:paddingLeft="@dimen/dimen_2"
+                    android:paddingRight="@dimen/dimen_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_10"
+                    android:visibility="gone"
+                    tools:text="99+"
+                    tools:visibility="visible"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

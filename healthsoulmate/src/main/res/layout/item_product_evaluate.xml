@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.zero.library.base.utils.binding.ImgBinding"/>
+
+        <variable
+            name="imgInfoHead"
+            type="ImgBinding"/>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_10"
+            android:background="@color/app_background_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dimen_10"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_10">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_25"
+                android:layout_height="@dimen/dimen_25"
+                app:imageCircle="@{imgInfoHead}"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:textSize="@dimen/text_12"
+                tools:text="姓名"/>
+
+            <TextView
+                android:id="@+id/tv_evaluate_time"
+                style="@style/text_normal"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dimen_10"
+                android:gravity="right"
+                android:paddingRight="@dimen/dimen_10"
+                android:textColor="@color/gray_77"
+                android:textSize="@dimen/text_12"
+                tools:text="2015-08-08 23:40:09"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_10"
+            android:paddingLeft="@dimen/dimen_10">
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:id="@+id/rating_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/rating_evaluate"
+                    style="@style/SmallRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_25"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_evaluate_content"
+                style="@style/text_normal"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:gravity="left"
+                android:textSize="@dimen/text_12"
+                tools:text="商品评价"/>
+
+            <LinearLayout
+                android:id="@+id/ll_evaluate_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:orientation="horizontal"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_buy_time"
+            style="@style/text_normal"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:text="购买日期：2015-07-27 21:44:03"
+            android:textColor="@color/gray_99"
+            android:textSize="@dimen/text_12"/>
+
+        <TextView
+            android:id="@+id/tv_reply"
+            style="@style/text_normal"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:textColor="@color/red_FF"
+            android:textSize="@dimen/text_13"
+            android:visibility="gone"
+            tools:text="客服回复:很高兴您能购买该产品"
+            tools:visibility="visible"/>
+    </LinearLayout>
+</layout>

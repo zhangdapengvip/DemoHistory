@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="imgInfo"
+            type="com.zero.library.base.utils.binding.ImgBinding"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:imageSquare="@{imgInfo}"/>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="imgInfo"
+            type="com.zero.library.base.utils.binding.ImgBinding"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <com.zero.library.base.view.TitleBarView
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/ll_unlogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/dimen_10">
+
+            <ImageView
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/dimen_80"
+                android:layout_height="@dimen/dimen_80"
+                android:background="@drawable/ic_default_head"
+                app:imageCircle="@{imgInfo}"/>
+
+            <TextView
+                android:id="@+id/btn_login_regist"
+                style="@style/text_normal"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/iv_head"
+                android:padding="@dimen/dimen_20"
+                android:text="@string/btn_login_regist"
+                android:textColor="@color/bg_app_text_color"
+                android:textSize="@dimen/text_28"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/dimen_10"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_login_head"
+                android:layout_width="@dimen/dimen_80"
+                android:layout_height="@dimen/dimen_80"
+                app:imageCircle="@{imgInfo}"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/text_normal"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:layout_toRightOf="@id/iv_login_head"
+                android:text="朝康联"
+                android:textSize="@dimen/text_18"/>
+
+            <TextView
+                android:id="@+id/btn_mine"
+                style="@style/text_normal"
+                android:layout_alignBottom="@id/iv_login_head"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableRight="@drawable/ic_gray_right"
+                android:padding="@dimen/dimen_10"
+                android:text="账户管理"/>
+
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_simple"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_10"
+            android:background="@color/transparent"/>
+
+        <include layout="@layout/include_line_simple"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_wait_pay"
+                style="@style/text_normal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dimen_10"
+                android:drawableTop="@drawable/ic_wait_paying"
+                android:padding="@dimen/dimen_10"
+                android:text="待付款"/>
+
+            <TextView
+                android:id="@+id/btn_aready_pay"
+                style="@style/text_normal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dimen_10"
+                android:drawableTop="@drawable/ic_is_paying"
+                android:padding="@dimen/dimen_10"
+                android:text="已付款"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/include_line_simple"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_10"
+            android:background="@color/transparent"/>
+
+        <include layout="@layout/include_line_simple"/>
+
+        <TextView
+            android:id="@+id/btn_my_post"
+            style="@style/text_normal"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_mine_forum"
+            android:drawablePadding="@dimen/dimen_5"
+            android:drawableRight="@drawable/ic_gray_right"
+            android:gravity="left"
+            android:padding="@dimen/dimen_10"
+            android:text="我的帖子"
+            android:textSize="@dimen/text_16"/>
+
+        <include layout="@layout/include_line_simple"/>
+
+        <TextView
+            android:id="@+id/btn_my_save"
+            style="@style/text_normal"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_mine_collect"
+            android:drawablePadding="@dimen/dimen_5"
+            android:drawableRight="@drawable/ic_gray_right"
+            android:gravity="left"
+            android:padding="@dimen/dimen_10"
+            android:text="我的收藏"
+            android:textSize="@dimen/text_16"/>
+
+        <include layout="@layout/include_line_simple"/>
+
+        <TextView
+            android:id="@+id/btn_my_attention"
+            style="@style/text_normal"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_mine_attention"
+            android:drawablePadding="@dimen/dimen_5"
+            android:drawableRight="@drawable/ic_gray_right"
+            android:gravity="left"
+            android:padding="@dimen/dimen_10"
+            android:text="我的关注"
+            android:textSize="@dimen/text_16"/>
+
+        <include layout="@layout/include_line_simple"/>
+    </LinearLayout>
+</layout>

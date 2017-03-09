@@ -1,0 +1,159 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'//kotlin
+apply plugin: 'kotlin-android-extensions'//kotlin
+apply plugin: 'me.tatarka.retrolambda'//lambda
+apply plugin: 'com.neenbedankt.android-apt' //dagger2
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.http"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        resValue "string", "build_time", buildTime()
+        resValue "string", "build_host", hostName()
+    }
+    //签名信息
+    signingConfigs {
+        preview {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+    //编译设置
+    buildTypes {
+        debug {
+            manifestPlaceholders = [BUILD_TYPE: "debug"]
+            applicationIdSuffix ""
+            shrinkResources false
+            //signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        preview {
+            manifestPlaceholders = [BUILD_TYPE: "preview"]
+            // 设置applicationId为包名+applicationIdSuffix
+            applicationIdSuffix ""
+            shrinkResources true
+            signingConfig signingConfigs.preview
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            manifestPlaceholders = [BUILD_TYPE: "release"]
+            applicationIdSuffix ""
+            shrinkResources true
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //多渠道打包
+    productFlavors {
+        dev {
+            manifestPlaceholders = [channel: "dev"]
+        }
+    }
+    //输出分类
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(
+                    output.outputFile.parent + "/${variant.buildType.name}",
+                    "app-${variant.buildType.name}-${variant.versionName}-${variant.productFlavors[0].name}.apk".toLowerCase())
+        }
+    }
+    //Kotlin设置
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    // 注释冲突
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.properties'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.xml'
+    }
+    // 使用Java1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    //编译设置
+    dexOptions {
+        incremental true
+        jumboMode = true
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+//编译时间
+def buildTime() {
+    return new Date().format("yyyy-MM-dd HH:mm:ss")
+}
+//编译主机
+def hostName() {
+    return System.getProperty("user.name") + "@" + InetAddress.localHost.hostName
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"//kotlin
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"//kotlin
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.android.support:appcompat-v7:$support_version"
+    compile "com.android.support:recyclerview-v7:$support_version"
+    compile "com.android.support:palette-v7:$support_version"
+    compile "com.android.support:cardview-v7:$support_version"
+    compile "com.android.support:design:$support_version"
+    compile "com.android.support:support-annotations:$support_version"
+    compile "com.android.support:gridlayout-v7:$support_version"
+
+    compile 'com.orhanobut:logger:1.11'//log
+
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'// okhttp
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'// okhttp
+
+    compile 'com.squareup.retrofit2:retrofit:2.0.1'// Retrofit
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'// Retrofit
+    compile 'com.squareup.retrofit2:converter-gson:2.0.1'// Retrofit
+
+    compile 'io.reactivex:rxandroid:1.1.0'// RxAndroid
+    compile 'io.reactivex:rxjava:1.1.3'// RxJava
+
+    compile 'com.google.dagger:dagger:2.2'// dagger2
+    apt 'com.google.dagger:dagger-compiler:2.2'// dagger2
+    provided 'org.glassfish:javax.annotation:10.0-b28'// dagger2
+
+    apt 'org.projectlombok:lombok:1.16.8'// javaBean
+    provided 'org.projectlombok:lombok:1.16.8'// javaBean
+
+    compile 'com.jakewharton:butterknife:7.0.1'//InjectView
+
+    compile 'com.squareup.picasso:picasso:2.5.2'//picasso
+    compile 'com.squareup.okhttp:okhttp:2.7.5'// picasso缓存图片
+
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"//kotlin
+    compile "org.jetbrains.anko:anko-sdk15:$anko_version"//kotlin
+    compile "org.jetbrains.anko:anko-support-v4:$anko_version"//kotlin
+    compile "org.jetbrains.anko:anko-appcompat-v7:$anko_version"//kotlin
+}

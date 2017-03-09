@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="info"
+            type="com.http.bean.UserInfo"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/normal_background"
+        android:orientation="vertical"
+        tools:context=".activity.MainActivity">
+
+        <TextView
+            android:id="@+id/btn_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@drawable/btn_normal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@{info.userName}"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/btn_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@drawable/btn_normal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@{info.nickName}"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/btn_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@drawable/btn_normal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="BTN_THR"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/btn_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@drawable/btn_normal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="BTN_FOU"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/btn_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@drawable/btn_normal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="BTN_FIV"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/btn_six"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@drawable/btn_normal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="BTN_SIX"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/btn_seven"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@drawable/btn_normal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="BTN_SEV"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+
+        <TextView
+            android:id="@+id/btn_eight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_5"
+            android:background="@drawable/btn_normal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="BTN_EIG"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/selector_llistview_white"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/dimen_5"
+              android:paddingTop="@dimen/dimen_5">
+
+    <CheckBox
+        android:id="@+id/cb_auto_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/selector_check_box_blue"
+        android:clickable="false"
+        android:drawablePadding="@dimen/dimen_5"
+        android:focusable="false"
+        android:textSize="@dimen/text_14"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/text_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_5"
+        android:gravity="left"
+        android:textSize="@dimen/text_16"
+        tools:text="条目信息"/>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<resources>
+
+    <style name="home_radiobutton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">@dimen/dimen_5</item>
+        <item name="android:paddingTop">@dimen/dimen_5</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="find_radiobutton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:paddingBottom">@dimen/dimen_3</item>
+        <item name="android:paddingTop">@dimen/dimen_5</item>
+        <item name="android:drawablePadding">@dimen/dimen_2</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="product_radiobutton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/dimen_7</item>
+        <item name="android:paddingRight">@dimen/dimen_7</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="product_detail_radiobutton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="StyledIndicatorsProduct" parent="@style/AppTheme">
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicatorProduct</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+    </style>
+
+    <style name="CustomTabPageIndicatorProduct">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_tab_two</item>
+        <item name="android:divider">@drawable/bg_tab_indicator_divider</item>
+        <item name="android:showDividers">none</item>
+        <item name="android:textColor">@drawable/bg_tab_text_colortwo</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:dividerPadding">10dp</item>
+        <item name="android:paddingLeft">@dimen/dimen_10</item>
+        <item name="android:paddingRight">@dimen/dimen_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fadingEdgeLength">10dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+    </style>
+
+    <style name="SmallRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:numStars">5</item>
+        <item name="android:rating">5</item>
+        <item name="android:stepSize">1</item>
+        <item name="android:progressDrawable">@drawable/bg_ratingbar</item>
+        <item name="android:thumb">@null</item>
+    </style>
+
+    <!--LinearLayout 输入框-->
+    <style name="input_linearlayout" parent="btn_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_edittext_login</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/dimen_10</item>
+        <item name="android:paddingBottom">@dimen/dimen_2</item>
+        <item name="android:paddingLeft">@dimen/dimen_5</item>
+        <item name="android:paddingRight">@dimen/dimen_5</item>
+        <item name="android:paddingTop">@dimen/dimen_2</item>
+    </style>
+
+</resources>

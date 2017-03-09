@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.zero.library.base.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_2">
+
+            <com.zero.library.base.view.RecyclableImageView
+                android:id="@+id/iv_head"
+                android:layout_width="@dimen/dimen_70"
+                android:layout_height="@dimen/dimen_70"
+                android:layout_margin="@dimen/dimen_15"/>
+
+            <TextView
+                android:id="@+id/tv_auth_type"
+                style="@style/text_normal"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:text="@string/test_string"/>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_20"
+                android:paddingTop="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_padding_normal"
+                    android:gravity="start"
+                    android:minEms="5"
+                    android:text="@string/label_nickname"
+                    android:textColor="@color/bg_text_lable"/>
+
+                <EditText
+                    android:id="@+id/et_mine_username"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_nickname"
+                    android:inputType="phone"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_20"
+                android:paddingTop="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_padding_normal"
+                    android:gravity="start"
+                    android:minEms="5"
+                    android:text="@string/label_name"
+                    android:textColor="@color/bg_text_lable"/>
+
+                <EditText
+                    android:id="@+id/et_mine_name"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_name"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_20"
+                android:paddingTop="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_padding_normal"
+                    android:gravity="start"
+                    android:minEms="5"
+                    android:text="@string/label_hospital"
+                    android:textColor="@color/bg_text_lable"/>
+
+                <EditText
+                    android:id="@+id/et_mine_hospital"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_hospital"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_20"
+                android:paddingTop="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_padding_normal"
+                    android:gravity="start"
+                    android:minEms="5"
+                    android:text="@string/label_office"
+                    android:textColor="@color/bg_text_lable"/>
+
+                <EditText
+                    android:id="@+id/et_office"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_office"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_20"
+                android:paddingRight="@dimen/dimen_30"
+                android:paddingTop="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_padding_normal"
+                    android:gravity="start"
+                    android:minEms="5"
+                    android:text="@string/label_title"
+                    android:textColor="@color/bg_text_lable"/>
+
+                <com.zero.library.base.view.AppSpinner
+                    android:id="@+id/spinner_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_20"
+                android:paddingRight="@dimen/dimen_30"
+                android:paddingTop="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_padding_normal"
+                    android:gravity="start"
+                    android:minEms="5"
+                    android:text="@string/label_field"
+                    android:textColor="@color/bg_text_lable"/>
+
+                <com.zero.library.base.view.AppSpinner
+                    android:id="@+id/spinner_domain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_20"
+                android:paddingTop="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_padding_normal"
+                    android:gravity="start"
+                    android:minEms="5"
+                    android:text="@string/label_phone"
+                    android:textColor="@color/bg_text_lable"/>
+
+                <EditText
+                    android:id="@+id/et_mine_phone"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_phone"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:id="@+id/label_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_20"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_padding_normal"
+                    android:layout_width="match_parent"
+                    android:drawableRight="@drawable/ic_gray_right"
+                    android:gravity="start"
+                    android:text="@string/label_change_password"
+                    android:textColor="@color/bg_text_lable"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <TextView
+                android:id="@+id/tv_logout"
+                style="@style/text_color_normal"
+                android:layout_marginBottom="@dimen/dimen_20"
+                android:layout_marginTop="@dimen/dimen_50"
+                android:background="@drawable/bg_edittext_login"
+                android:paddingBottom="@dimen/dimen_6"
+                android:paddingLeft="@dimen/dimen_40"
+                android:paddingRight="@dimen/dimen_40"
+                android:paddingTop="@dimen/dimen_6"
+                android:text="@string/title_right_logout"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

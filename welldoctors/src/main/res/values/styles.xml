@@ -1,0 +1,52 @@
+<resources>
+    <!--LinearLayout 输入框-->
+    <style name="input_linearlayout" parent="btn_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_edittext_login</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/dimen_10</item>
+        <item name="android:paddingBottom">@dimen/dimen_2</item>
+        <item name="android:paddingLeft">@dimen/dimen_5</item>
+        <item name="android:paddingRight">@dimen/dimen_5</item>
+        <item name="android:paddingTop">@dimen/dimen_2</item>
+    </style>
+
+    <!--Label样式-->
+    <style name="label_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/dimen_16</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textColor">@color/gray_33</item>
+        <item name="android:drawableLeft">@drawable/bg_left_rect</item>
+        <item name="android:drawablePadding">@dimen/dimen_5</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">@dimen/dimen_5</item>
+        <item name="android:paddingTop">@dimen/dimen_5</item>
+    </style>
+
+    <style name="StyledIndicatorsTwo" parent="@style/AppTheme">
+        <item name="vpiCirclePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicatorTwo</item>
+        <item name="vpiUnderlinePageIndicatorStyle">@style/CustomUnderlinePageIndicator</item>
+    </style>
+
+    <style name="CustomTabPageIndicatorTwo">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_tab_two</item>
+        <item name="android:divider">@drawable/bg_tab_indicator_divider</item>
+        <item name="android:showDividers">none</item>
+        <item name="android:textColor">@drawable/bg_tab_text_colortwo</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:dividerPadding">10dp</item>
+        <item name="android:paddingLeft">@dimen/dimen_3</item>
+        <item name="android:paddingRight">@dimen/dimen_3</item>
+        <item name="android:paddingTop">@dimen/dimen_5</item>
+        <item name="android:paddingBottom">@dimen/dimen_6</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fadingEdgeLength">10dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+    </style>
+</resources>

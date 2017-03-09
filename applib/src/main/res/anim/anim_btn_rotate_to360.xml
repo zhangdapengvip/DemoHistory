@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="400"
+    android:fillAfter="true"
+    android:fromDegrees="180"
+    android:interpolator="@android:anim/decelerate_interpolator"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="360" >
+
+    <!--
+		pivotX  pivotY旋转时候 的坐标绝对位置的  
+		50这种方法使用的是绝对位置  
+		50%相对于空间本身定位  
+		"50%p"的意思是相对于控件的父控件的定位
+
+    -->
+
+</rotate>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background_color"
+    android:orientation="vertical">
+
+    <com.zero.library.base.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/look_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10"
+        android:background="@drawable/bg_edittext_line_4"
+        android:hint="查看密钥"
+        android:inputType="number"
+        android:padding="@dimen/dimen_10"/>
+
+    <ScrollView
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/text_one"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:layout_width="@dimen/dimen_160"
+                android:layout_height="10dp"
+                android:background="@color/green_88"/>
+
+            <TextView
+                android:id="@+id/text_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/bg_edittext_line_4"
+                android:padding="@dimen/dimen_5"
+                android:textSize="@dimen/text_16"/>
+
+            <TextView
+                android:id="@+id/text_imei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/bg_edittext_line_4"
+                android:padding="@dimen/dimen_5"
+                android:textSize="@dimen/text_16"/>
+
+            <TextView
+                android:id="@+id/text_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/bg_edittext_line_4"
+                android:padding="@dimen/dimen_5"
+                android:textSize="@dimen/text_16"/>
+
+            <TextView
+                android:id="@+id/text_phoneinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/bg_edittext_line_4"
+                android:padding="@dimen/dimen_5"
+                android:textSize="@dimen/text_16"/>
+
+            <TextView
+                android:id="@+id/btn_clean"
+                style="@style/btn_normal"
+                android:layout_margin="@dimen/dimen_5"
+                android:background="@drawable/bg_btn_normal"
+                android:text="@string/clean"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

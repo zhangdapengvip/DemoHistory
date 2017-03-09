@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="imgInfo"
+            type="com.zero.library.base.utils.binding.ImgBinding"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_45"
+                android:layout_height="@dimen/dimen_45"
+                android:layout_margin="@dimen/dimen_10"
+                app:imageRound="@{imgInfo}"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/text_normal"
+                android:textSize="@dimen/text_18"
+                tools:text="发帖人昵称"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

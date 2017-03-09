@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dimen_5"
+        android:paddingLeft="@dimen/dimen_20"
+        android:paddingRight="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_5"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_reply_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_reply_content"
+                style="@style/text_normal"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                tools:text="共同营造规范有序的法治环境，为推进“一带一路”建设、实现中国与中东欧国家共同发展提供有力司法服务和保障。"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

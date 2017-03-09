@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <com.zero.library.base.view.TitleBarView
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbarThumbVertical="@drawable/ic_scroll_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <TextView
+                        android:id="@+id/tv_order_number"
+                        style="@style/text_normal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        tools:text="订单号:19088245247"/>
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:text="等待付款"
+                        android:textColor="@color/red_FF"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_20">
+
+                    <TextView
+                        android:id="@+id/tv_buyer_name"
+                        style="@style/text_normal"
+                        android:textStyle="bold"
+                        tools:text="张无忌"/>
+
+                    <TextView
+                        android:id="@+id/tv_buyer_phone"
+                        style="@style/text_normal"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:textStyle="bold"
+                        tools:text="158****6674"/>
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/lv_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_10">
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="商品总额"/>
+
+                    <TextView
+                        android:id="@+id/tv_totle_price"
+                        style="@style/text_normal"
+                        android:textColor="@color/red_FF"
+                        tools:text="￥12.90"/>
+                </LinearLayout>
+
+                <include layout="@layout/include_line_simple"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_15">
+
+                    <TextView
+                        style="@style/text_normal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="实付款:"
+                        android:textSize="@dimen/text_16"/>
+
+                    <TextView
+                        android:id="@+id/tv_totle_pay"
+                        style="@style/text_normal"
+                        android:textColor="@color/red_FF"
+                        android:textSize="@dimen/text_20"
+                        tools:text="￥12.90"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dimen_10"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingRight="@dimen/dimen_10">
+
+                    <TextView
+                        android:id="@+id/tv_order_time"
+                        style="@style/text_normal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/bg_text_lable"
+                        android:textSize="@dimen/text_13"
+                        tools:text="下单时间:2016-05-17 10:59:22"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/include_line_simple"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_5">
+
+            <TextView
+                android:id="@+id/btn_dopay"
+                style="@style/btn_normal"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:background="@drawable/bg_red_edit"
+                android:minEms="4"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_1"
+                android:paddingRight="@dimen/dimen_1"
+                android:paddingTop="@dimen/dimen_5"
+                android:text="去支付"
+                android:textColor="@color/red_FF"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

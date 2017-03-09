@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:visibility="visible">
+
+    <com.zero.library.base.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="低压(mmHg)"/>
+
+                    <EditText
+                        android:id="@+id/et_hypotension"
+                        style="@style/textview_value"
+                        android:inputType="number"
+                        android:maxLength="3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="高压(mmHg)"/>
+
+                    <EditText
+                        android:id="@+id/et_hypertension"
+                        style="@style/textview_value"
+                        android:inputType="number"
+                        android:maxLength="3"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="血脂(mmol/L)"/>
+
+                    <EditText
+                        android:id="@+id/et_bloodfat"
+                        style="@style/textview_value"
+                        android:inputType="numberDecimal"
+                        android:maxLength="4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="血糖(mmol/L)"/>
+
+                    <EditText
+                        android:id="@+id/et_bloodsugar"
+                        style="@style/textview_value"
+                        android:inputType="numberDecimal"
+                        android:maxLength="3"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabone"
+                style="@style/lable_health"
+                android:text="饮食口味"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_ishot"
+                        style="@style/multi_checkbox_health"
+                        android:text="偏辣"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_isonlyhot"
+                        style="@style/multi_checkbox_health"
+                        android:text="嗜辣"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_issalty"
+                        style="@style/multi_checkbox_health"
+                        android:text="偏咸"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_isonlysalty"
+                        style="@style/multi_checkbox_health"
+                        android:text="嗜咸"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_issweet"
+                        style="@style/multi_checkbox_health"
+                        android:text="偏甜"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_isonlysweet"
+                        style="@style/multi_checkbox_health"
+                        android:text="嗜甜"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_fat"
+                        style="@style/multi_checkbox_health"
+                        android:text="偏油腻"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_dietlight"
+                        style="@style/multi_checkbox_health"
+                        android:text="饮食清淡"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="其他口味"/>
+
+                    <EditText
+                        android:id="@+id/et_otherflavors"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabtwo"
+                style="@style/lable_health"
+                android:text="烹饪方式"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_cooking"
+                        style="@style/multi_checkbox_health"
+                        android:text="蒸煮为主"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_kuaichao"
+                        style="@style/multi_checkbox_health"
+                        android:text="煎、快炒为主"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_shaokao"
+                        style="@style/multi_checkbox_health"
+                        android:text="油炸、烧烤为主"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_stew"
+                        style="@style/multi_checkbox_health"
+                        android:text="煲炖为主"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_halogen"
+                        style="@style/multi_checkbox_health"
+                        android:text="卤制、腌制为主"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabthree"
+                style="@style/lable_health"
+                android:text="食用油种类"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_vegetableoil"
+                        style="@style/multi_checkbox_health"
+                        android:text="植物油"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_blendoil"
+                        style="@style/multi_checkbox_health"
+                        android:text="调和油"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_animaloil"
+                        style="@style/multi_checkbox_health"
+                        android:text="动物油"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_mixedoil"
+                        style="@style/multi_checkbox_health"
+                        android:text="混合油"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="比例"/>
+
+                        <EditText
+                            android:id="@+id/et_mixedoilratio"
+                            style="@style/textview_value"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabfour"
+                style="@style/lable_health"
+                android:text="饮水饮料"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:inputType="number"
+                            android:maxLength="4"
+                            android:text="水饮用量(ml)"/>
+
+                        <EditText
+                            android:id="@+id/et_drinkamount1"
+                            style="@style/textview_value"
+                            android:inputType="number"
+                            android:maxLength="4"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="饮水频率(次/天)"/>
+
+                        <EditText
+                            android:id="@+id/et_frequency1"
+                            style="@style/textview_value"
+                            android:inputType="number"
+                            android:maxLength="2"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="饮料饮用量(ml)"/>
+
+                        <EditText
+                            android:id="@+id/et_drinkamount2"
+                            style="@style/textview_value"
+                            android:inputType="number"
+                            android:maxLength="4"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="饮料频率(次/天)"/>
+
+                        <EditText
+                            android:id="@+id/et_frequency2"
+                            style="@style/textview_value"
+                            android:inputType="number"
+                            android:maxLength="2"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="茶饮用量(ml)"/>
+
+                        <EditText
+                            android:id="@+id/et_drinkamount3"
+                            style="@style/textview_value"
+                            android:inputType="number"
+                            android:maxLength="4"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="饮茶频率(次/天)"/>
+
+                        <EditText
+                            android:id="@+id/et_frequency3"
+                            style="@style/textview_value"
+                            android:inputType="number"
+                            android:maxLength="2"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="茶类型"/>
+
+                        <com.yijia.patient.ui.view.MultiChoiceDialog
+                            android:id="@+id/mcd_teatype"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"
+                            app:multi_size="1"
+                            app:source_key="tea_type"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="茶浓度"/>
+
+                        <com.yijia.patient.ui.view.MultiChoiceDialog
+                            android:id="@+id/mcd_teachroma"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"
+                            app:multi_size="1"
+                            app:source_key="tea_chroma"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="酒饮用量(ml)"/>
+
+                        <EditText
+                            android:id="@+id/et_drinkamount4"
+                            style="@style/textview_value"
+                            android:inputType="number"
+                            android:maxLength="4"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="饮酒频率(次/天)"/>
+
+                        <EditText
+                            android:id="@+id/et_frequency4"
+                            style="@style/textview_value"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="酒类型"/>
+
+                        <com.yijia.patient.ui.view.MultiChoiceDialog
+                            android:id="@+id/mcd_winetype"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"
+                            app:multi_size="1"
+                            app:source_key="wine_type"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabfive"
+                style="@style/lable_health"
+                android:text="吸烟情况"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_issmoking"
+                        style="@style/multi_checkbox_health"
+                        android:text="是否吸烟"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="吸烟频率(次/天)"/>
+
+                        <EditText
+                            android:id="@+id/et_smokingfrequency2"
+                            style="@style/textview_value"
+                            android:inputType="number"
+                            android:maxLength="2"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="吸二手烟频率(次/天)"/>
+
+                    <EditText
+                        android:id="@+id/et_smokingfrequency1"
+                        style="@style/health_textview_base"
+                        android:layout_width="@dimen/dimen_60"
+                        android:drawableBottom="@drawable/bg_bottom_line"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="吸二手烟时长(年)"/>
+
+                    <EditText
+                        android:id="@+id/et_smokingoften"
+                        style="@style/health_textview_base"
+                        android:layout_width="@dimen/dimen_60"
+                        android:drawableBottom="@drawable/bg_bottom_line"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="吸烟时间"/>
+
+                        <TextView
+                            android:id="@+id/tv_smokingdate"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_choice_date"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="戒烟时间"/>
+
+                        <TextView
+                            android:id="@+id/tv_smokcessationdate"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_choice_date"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabsix"
+                style="@style/lable_health"
+                android:text="睡眠习惯"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_six"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_sleeppattern"
+                        style="@style/multi_checkbox_health"
+                        android:text="睡眠是否规律"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="睡眠质量"/>
+
+                        <com.yijia.patient.ui.view.MultiChoiceDialog
+                            android:id="@+id/mcd_sleepquality"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"
+                            app:multi_size="1"
+                            app:source_key="sleep_quality"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="早睡时间"/>
+
+                        <TextView
+                            android:id="@+id/tv_earlysleeptime"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="晚睡时间"/>
+
+                        <TextView
+                            android:id="@+id/tv_latesleeptime"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="失眠情况"/>
+
+                        <com.yijia.patient.ui.view.MultiChoiceDialog
+                            android:id="@+id/mcd_insomnia"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"
+                            app:multi_size="1"
+                            app:source_key="lose_sleep"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="熬夜情况"/>
+
+                        <com.yijia.patient.ui.view.MultiChoiceDialog
+                            android:id="@+id/mcd_boilnight"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"
+                            app:multi_size="1"
+                            app:source_key="late_sleep"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabseven"
+                style="@style/lable_health"
+                android:text="精力"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_seven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="精力情况"/>
+
+                        <com.yijia.patient.ui.view.MultiChoiceDialog
+                            android:id="@+id/mcd_energy"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"
+                            app:multi_size="1"
+                            app:source_key="energy"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="其他情况"/>
+
+                    <EditText
+                        android:id="@+id/et_otherenergy"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabeight"
+                style="@style/lable_health"
+                android:text="情绪"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_feelingnormal"
+                        style="@style/multi_checkbox_health"
+                        android:text="情绪正常"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_easytension"
+                        style="@style/multi_checkbox_health"
+                        android:text="易紧张"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_easyanxiety"
+                        style="@style/multi_checkbox_health"
+                        android:text="易焦虑"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_easydepressed"
+                        style="@style/multi_checkbox_health"
+                        android:text="易抑郁"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_easyangry"
+                        style="@style/multi_checkbox_health"
+                        android:text="易生气"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_easyexcited"
+                        style="@style/multi_checkbox_health"
+                        android:text="易激动"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_easyemotionallow"
+                        style="@style/multi_checkbox_health"
+                        android:text="易情绪低落"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_pressure"
+                        style="@style/multi_checkbox_health"
+                        android:text="压力大"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_oppressive"
+                        style="@style/multi_checkbox_health"
+                        android:text="压抑感强"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/textview_key_base"
+                        android:text="其他情绪"/>
+
+                    <EditText
+                        android:id="@+id/et_otherfeeling"
+                        style="@style/textview_value"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabnine"
+                style="@style/lable_health"
+                android:text="工作或家务活动"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_nine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_highintensity1"
+                        style="@style/multi_checkbox_health"
+                        android:text="高强度"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="活动名称"/>
+
+                        <EditText
+                            android:id="@+id/et_activityname1"
+                            style="@style/textview_value"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_mediumintensity1"
+                        style="@style/multi_checkbox_health"
+                        android:text="中等强度"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="活动名称"/>
+
+                        <EditText
+                            android:id="@+id/et_activityname2"
+                            style="@style/textview_value"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_light1"
+                        style="@style/multi_checkbox_health"
+                        android:text="轻度"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="活动名称"/>
+
+                        <EditText
+                            android:id="@+id/et_activityname3"
+                            style="@style/textview_value"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="活动频率"/>
+
+                        <com.yijia.patient.ui.view.MultiChoiceDialog
+                            android:id="@+id/mcd_activityfrequency"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"
+                            app:multi_size="1"
+                            app:source_key="chores_rate"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_5"
+                android:background="@color/gray_F0"/>
+
+            <TextView
+                android:id="@+id/tv_tabten"
+                style="@style/lable_health"
+                android:text="体育运动强度"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content_ten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_highintensity2"
+                        style="@style/multi_checkbox_health"
+                        android:text="高强度"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="运动名称"/>
+
+                        <EditText
+                            android:id="@+id/et_exercisename1"
+                            style="@style/textview_value"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_Mediumintensity2"
+                        style="@style/multi_checkbox_health"
+                        android:text="中等强度"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="运动名称"/>
+
+                        <EditText
+                            android:id="@+id/et_exercisename2"
+                            style="@style/textview_value"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_light2"
+                        style="@style/multi_checkbox_health"
+                        android:text="轻度"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="运动名称"/>
+
+                        <EditText
+                            android:id="@+id/et_exercisename3"
+                            style="@style/textview_value"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_key_base"
+                            android:text="运动频率"/>
+
+                        <com.yijia.patient.ui.view.MultiChoiceDialog
+                            android:id="@+id/mcd_exercisefrequency"
+                            style="@style/textview_value"
+                            android:drawableRight="@drawable/ic_right_drop"
+                            app:multi_size="1"
+                            app:source_key="sports_rate"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

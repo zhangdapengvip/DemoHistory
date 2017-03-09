@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/tab_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:background="@android:color/white"/>
+
+    <include layout="@layout/include_line_simple"/>
+
+    <RadioGroup
+        android:id="@+id/tabs_group"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_tab_news"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:singleLine="true"
+            android:text="@string/tab_one"
+            android:textColor="@color/selector_hometab_text_color"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/tab_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_tab_view"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:singleLine="true"
+            android:text="@string/tab_two"
+            android:textColor="@color/selector_hometab_text_color"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/tab_tong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_tab_tong"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:singleLine="true"
+            android:text="@string/tab_three"
+            android:textColor="@color/selector_hometab_text_color"
+            android:textSize="13sp"/>
+
+        <RadioButton
+            android:id="@+id/tab_concur"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_tab_concur"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:paddingTop="7dp"
+            android:singleLine="true"
+            android:text="@string/tab_four"
+            android:textColor="@color/selector_hometab_text_color"
+            android:textSize="13sp"/>
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/rg_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_tab_one"
+                style="@style/product_detail_radiobutton"
+                android:checked="true"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingTop="@dimen/dimen_5"
+                android:text="全部评价\n0"
+                android:textColor="@color/selector_text_product_detail_tab"/>
+
+            <RadioButton
+                android:id="@+id/rb_tab_two"
+                style="@style/product_detail_radiobutton"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingTop="@dimen/dimen_5"
+                android:text="好评 \n0"
+                android:textColor="@color/selector_text_product_detail_tab"/>
+
+            <RadioButton
+                android:id="@+id/rb_tab_three"
+                style="@style/product_detail_radiobutton"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingTop="@dimen/dimen_5"
+                android:text="中评 \n0"
+                android:textColor="@color/selector_text_product_detail_tab"/>
+
+            <RadioButton
+                android:id="@+id/rb_tab_four"
+                style="@style/product_detail_radiobutton"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingTop="@dimen/dimen_5"
+                android:text="差评 \n0"
+                android:textColor="@color/selector_text_product_detail_tab"/>
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@+id/tab_evaluate_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:drawableTop="@android:color/transparent"/>
+    </LinearLayout>
+</layout>

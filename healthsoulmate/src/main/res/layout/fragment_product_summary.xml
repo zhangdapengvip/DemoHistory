@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:scrollbarThumbVertical="@drawable/ic_scroll_vertical"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_140"/>
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    style="@style/text_normal"
+                    android:layout_width="@dimen/dimen_30"
+                    android:layout_height="@dimen/dimen_30"
+                    android:layout_alignBottom="@id/vp_head"
+                    android:layout_alignRight="@id/vp_head"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@drawable/bg_count_pager"
+                    android:text="0/0"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/text_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="start"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_10"
+                tools:text="商品标题"/>
+
+            <TextView
+                android:id="@+id/tv_introduce"
+                style="@style/text_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="left"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingRight="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_4"
+                android:textColor="@color/red_FF"
+                android:textSize="@dimen/text_13"
+                tools:text="商品描述"/>
+
+            <TextView
+                android:id="@+id/tv_price"
+                style="@style/text_normal"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:gravity="left"
+                android:paddingBottom="@dimen/dimen_5"
+                android:paddingLeft="@dimen/dimen_10"
+                android:paddingTop="@dimen/dimen_5"
+                android:textColor="@color/red_FF"
+                android:textSize="@dimen/text_20"
+                android:textStyle="bold"
+                tools:text="￥99.90"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_10"
+                android:background="@color/app_background_color"/>
+
+            <include layout="@layout/include_line_simple"/>
+
+            <LinearLayout
+                android:id="@+id/ll_evaluate_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="@dimen/dimen_10">
+
+                <TextView
+                    android:id="@+id/tv_evaluate_count"
+                    style="@style/text_normal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="评价(0)"
+                    android:textColor="@color/gray_77"
+                    android:textSize="@dimen/text_13"/>
+
+                <TextView
+                    android:id="@+id/tv_good_rate"
+                    style="@style/text_normal"
+                    android:drawablePadding="@dimen/dimen_10"
+                    android:drawableRight="@drawable/ic_gray_right"
+                    android:text="好评100%"
+                    android:textColor="@color/gray_77"
+                    android:textSize="@dimen/text_13"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_evaluate_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</layout>

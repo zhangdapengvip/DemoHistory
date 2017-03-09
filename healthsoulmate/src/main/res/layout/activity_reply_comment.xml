@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <com.zero.library.base.view.TitleBarView
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_10">
+
+            <EditText
+                android:id="@+id/et_reply_content"
+                style="@style/edittext_normal_padding"
+                android:hint="回复"
+                android:maxLines="5"
+                android:minLines="5"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_img_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_10">
+
+            <TableLayout
+                android:id="@+id/tl_img_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TableLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

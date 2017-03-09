@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RadioButton
+    style="@style/find_radiobutton"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:text="@string/tab_famous_doctor"
+    android:textColor="@color/selector_hometab_text_color"/>
+
+
+
+

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_background_color"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen_30"
+            android:paddingRight="@dimen/dimen_30"
+            android:paddingTop="@dimen/dimen_120">
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:text="@string/label_username"/>
+
+                <EditText
+                    android:id="@+id/et_regist_username"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_username"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:text="@string/label_password"/>
+
+                <EditText
+                    android:id="@+id/et_reigist_password"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:text="@string/label_confirm_password"/>
+
+                <EditText
+                    android:id="@+id/et_regist_confirm"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_confirm_password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:text="@string/label_champs"/>
+
+                <com.zero.library.base.view.AppSpinner
+                    android:id="@+id/et_regist_domain"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_state"
+                    style="@style/text_normal"
+                    android:layout_marginRight="@dimen/dimen_3"
+                    android:text="@string/label_declare"
+                    android:textColor="@color/bg_text_lable"/>
+
+                <CheckBox
+                    android:id="@+id/cb_reigst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_check_box_blue"
+                    android:drawablePadding="@dimen/dimen_5"
+                    android:checked="true"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:text="@string/label_reading"
+                    android:textColor="@color/bg_text_lable"
+                    android:textSize="@dimen/text_14"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_regist_commit"
+                style="@style/btn_normal_largesize"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_btn_normal"
+                android:text="@string/btn_confirm_register"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_padding_normal"
+                    android:text="@string/label_has_username"
+                    android:textColor="@color/bg_text_lable"/>
+
+                <TextView
+                    android:id="@+id/btn_back_login"
+                    style="@style/text_padding_color"
+                    android:text="@string/label_back_login"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

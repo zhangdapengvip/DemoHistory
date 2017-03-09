@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_background_color"
+              android:orientation="vertical">
+
+    <com.zero.library.base.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_30"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_30">
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_name"/>
+
+                <EditText
+                    android:id="@+id/et_user_name"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_authentication_name"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_hospital"/>
+
+                <EditText
+                    android:id="@+id/et_hospital"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_authentication_hospital"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_office"/>
+
+                <EditText
+                    android:id="@+id/et_office"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_office"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout"
+                android:paddingRight="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_title"/>
+
+                <com.zero.library.base.view.AppSpinner
+                    android:id="@+id/spinner_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_phone"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_authentication_phone"
+                    android:inputType="phone"
+                    android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/input_linearlayout"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/text_padding_color"
+                        android:gravity="start"
+                        android:minEms="4"
+                        android:text="@string/label_authentication_phone_code"/>
+
+                    <EditText
+                        android:id="@+id/et_phone_code"
+                        style="@style/edittext_normal_padding"
+                        android:hint="@string/hint_authentication_phone_code"
+                        android:singleLine="true"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_get_phonecode"
+                    style="@style/btn_normal"
+                    android:layout_marginLeft="@dimen/dimen_5"
+                    android:background="@drawable/bg_btn_normal"
+                    android:minEms="6"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:paddingLeft="@dimen/dimen_1"
+                    android:paddingRight="@dimen/dimen_1"
+                    android:paddingTop="@dimen/dimen_5"
+                    android:text="@string/btn_authentication_get_phone_code"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen_5">
+
+                <TextView
+                    style="@style/text_color_normal"
+                    android:text="@string/label_authentication_credentials"/>
+
+                <ImageView
+                    android:id="@+id/iv_doctors_certificate"
+                    android:layout_width="@dimen/dimen_120"
+                    android:layout_height="@dimen/dimen_120"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:src="@drawable/ic_large_phone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_commit"
+                style="@style/btn_normal_largesize"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:background="@drawable/bg_btn_normal"
+                android:text="@string/btn_auth_now"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

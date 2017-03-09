@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="itemInfo"
+            type="com.healthsoulmate.zkl.forum.protocol.response.PostsPageResponse.PageBean.RowsBean"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_normal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:gravity="left"
+            android:maxLines="3"
+            android:text="@{itemInfo.postsTitle}"
+            android:textSize="@dimen/text_16"
+            tools:text="我想知道月薪4000左右的都用什么护肤品....求推荐"/>
+
+        <TextView
+            style="@style/text_normal"
+            android:gravity="left"
+            android:maxLines="2"
+            android:text="@{itemInfo.content}"
+            android:textColor="@color/bg_text_lable"
+            android:textSize="@dimen/dimen_14"
+            tools:text="爱词霸英语为广大网友提供在线翻译、在线词典、英语口语、英语学习资料、汉语词典,金山词霸下载等服务,致力于为您提供优质权威的在线英语服务"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/text_normal"
+                android:text="@{itemInfo.userName}"
+                android:textColor="@color/bg_item_name_color"
+                tools:text="微风里的羽毛"/>
+
+            <TextView
+                style="@style/text_normal"
+                android:layout_marginLeft="@dimen/dimen_20"
+                android:text="@{itemInfo.posttime}"
+                android:textColor="@color/bg_text_lable"
+                android:textSize="@dimen/dimen_12"
+                tools:text="04-28  11:22"/>
+
+            <TextView
+                android:id="@+id/tv_num"
+                style="@style/text_normal"
+                android:layout_width="match_parent"
+                android:gravity="right"
+                android:textColor="@color/bg_text_lable"
+                android:textSize="@dimen/dimen_12"
+                tools:text="222/554"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

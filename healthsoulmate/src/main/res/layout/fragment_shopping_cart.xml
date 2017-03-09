@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <com.zero.library.base.view.TitleBarView
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.zero.library.base.view.pullrefreshview.PullToRefreshExpandableListView
+                android:id="@+id/pull_refresh_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_background_color"
+                android:divider="@drawable/bg_line_simple"
+                android:scrollbarThumbVertical="@drawable/ic_scroll_vertical"/>
+
+            <TextView
+                android:id="@+id/tv_empty"
+                style="@style/text_normal"
+                android:layout_centerInParent="true"
+                android:text="@string/notice_shoppingcart_empty"
+                android:textColor="@color/gray_77"
+                android:textSize="@dimen/text_22"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_p6"
+            android:background="@color/gray_F0"/>
+
+        <LinearLayout
+            android:id="@+id/ll_pay_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/cb_check_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_check_box_blue"
+                android:drawablePadding="@dimen/dimen_4"
+                android:padding="@dimen/dimen_12"
+                android:text="全选"
+                android:textColor="@color/gray_55"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/ll_price_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_totle_price"
+                        style="@style/text_normal"
+                        android:layout_width="match_parent"
+                        android:gravity="left"
+                        android:textStyle="bold"
+                        tools:text="合计:"/>
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        style="@style/text_normal"
+                        android:layout_width="match_parent"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_66"
+                        android:textSize="@dimen/dimen_11"
+                        tools:text="总额:¥133.00 立减:¥60.00"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_pay"
+                    style="@style/btn_normal"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_red_btn"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingRight="@dimen/dimen_20"
+                    android:text="去结算"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_20"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

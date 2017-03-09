@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="imgInfo"
+            type="com.zero.library.base.utils.binding.ImgBinding"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="@dimen/dimen_70"
+            android:layout_height="@dimen/dimen_70"
+            android:layout_margin="@dimen/dimen_10"
+            app:imageRound="@{imgInfo}"/>
+
+        <LinearLayout
+            android:id="@+id/ll_one_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/text_normal"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:gravity="left"
+                android:text="乐视（Le）乐2Pro 32GB 金色 移动联通电信4G手机 双卡双待"/>
+
+            <TextView
+                android:id="@+id/btn_evaluate"
+                style="@style/btn_normal"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/dimen_5"
+                android:layout_marginRight="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:background="@drawable/bg_red_edit"
+                android:text="评价晒单"
+                android:textColor="@color/red_FF"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

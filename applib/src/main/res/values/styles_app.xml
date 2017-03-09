@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--TextView样式-->
+    <style name="text_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/gray_33</item>
+    </style>
+
+    <style name="text_color_normal" parent="text_normal">
+        <item name="android:textColor">@color/bg_app_text_color</item>
+    </style>
+
+    <style name="text_padding_color" parent="text_normal">
+        <item name="android:textColor">@color/bg_app_text_color</item>
+        <item name="android:paddingLeft">@dimen/dimen_5</item>
+        <item name="android:paddingRight">@dimen/dimen_5</item>
+        <item name="android:paddingTop">@dimen/dimen_3</item>
+        <item name="android:paddingBottom">@dimen/dimen_3</item>
+    </style>
+
+    <style name="text_padding_normal" parent="text_normal">
+        <item name="android:paddingLeft">@dimen/dimen_5</item>
+        <item name="android:paddingRight">@dimen/dimen_5</item>
+        <item name="android:paddingTop">@dimen/dimen_3</item>
+        <item name="android:paddingBottom">@dimen/dimen_3</item>
+    </style>
+
+    <!--EditText样式-->
+    <style name="edittext_normal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColorHint">@color/bg_text_hint</item>
+        <item name="android:textColor">@color/bg_text_normal</item>
+    </style>
+
+    <style name="edittext_normal_padding" parent="edittext_normal">
+        <item name="android:paddingLeft">@dimen/dimen_5</item>
+        <item name="android:paddingRight">@dimen/dimen_5</item>
+        <item name="android:paddingTop">@dimen/dimen_3</item>
+        <item name="android:paddingBottom">@dimen/dimen_3</item>
+    </style>
+
+    <style name="edittext_padding_color" parent="edittext_normal_padding">
+        <item name="android:textColor">@color/bg_app_text_color</item>
+    </style>
+
+    <!--Button样式-->
+    <style name="btn_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/dimen_7</item>
+        <item name="android:paddingBottom">@dimen/dimen_7</item>
+        <item name="android:paddingLeft">@dimen/dimen_30</item>
+        <item name="android:paddingRight">@dimen/dimen_30</item>
+    </style>
+
+    <style name="btn_normal_largesize" parent="btn_normal">
+        <item name="android:textSize">@dimen/text_18</item>
+    </style>
+</resources>

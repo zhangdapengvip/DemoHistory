@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/selector_llistview_white"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:padding="@dimen/dimen_5">
+
+    <ImageView
+        android:id="@+id/iv_news"
+        android:layout_width="@dimen/dimen_60"
+        android:layout_height="@dimen/dimen_60"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_padding_normal"
+            android:gravity="start"
+            android:singleLine="true"
+            android:textSize="@dimen/text_16"
+            tools:text="@string/test_string"/>
+
+        <View
+            android:layout_width="@dimen/dimen_1"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/text_padding_normal"
+            android:singleLine="true"
+            android:textColor="@color/bg_text_lable"
+            android:visibility="gone"
+            tools:text="@string/test_string"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_recommend"
+        android:layout_width="@dimen/dimen_45"
+        android:layout_height="@dimen/dimen_45"
+        android:background="@drawable/bg_btn_circle"
+        android:gravity="center"
+        android:text="@string/btn_recommend"
+        android:textColor="@color/white"/>
+</LinearLayout>

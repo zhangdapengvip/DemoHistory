@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <com.zero.library.base.view.TitleBarView
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.healthsoulmate.zkl.forum.view.ResizeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.zero.library.base.view.pullrefreshview.PullToRefreshListView
+                android:id="@+id/pull_refresh_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_background_color"
+                android:divider="@drawable/bg_line_simple"
+                android:scrollbarThumbVertical="@drawable/ic_scroll_vertical"/>
+        </com.healthsoulmate.zkl.forum.view.ResizeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_reply_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_5"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <EditText
+                android:id="@+id/et_reply"
+                style="@style/edittext_normal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_edittext_line_2"
+                android:maxLines="4"
+                android:padding="@dimen/dimen_5"
+                android:textSize="@dimen/text_16"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/btn_send"
+                    style="@style/text_normal"
+                    android:background="@drawable/bg_btn_normal"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:paddingLeft="@dimen/dimen_7"
+                    android:paddingRight="@dimen/dimen_7"
+                    android:paddingTop="@dimen/dimen_5"
+                    android:text="发送"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="imgInfo"
+            type="com.zero.library.base.utils.binding.ImgBinding"/>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_llistview_white"
+        android:padding="@dimen/dimen_5"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_news"
+            android:layout_width="@dimen/dimen_80"
+            android:layout_height="@dimen/dimen_80"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/dimen_5"
+            app:imageRound="@{imgInfo}"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_normal"
+            android:layout_width="match_parent"
+            android:layout_alignTop="@id/iv_news"
+            android:layout_toRightOf="@id/iv_news"
+            android:gravity="start"
+            android:maxLines="2"
+            tools:text="彩顿 2016春夏季短袖T恤男 短袖圆领印花休闲男T恤 上衣 蓝色 L"/>
+
+        <TextView
+            android:id="@+id/tv_count"
+            style="@style/text_normal"
+            android:layout_width="wrap_content"
+            android:layout_alignBottom="@id/iv_news"
+            android:layout_toRightOf="@id/iv_news"
+            android:gravity="start"
+            tools:text="1156条评价"/>
+
+        <TextView
+            android:id="@+id/tv_good_rate"
+            style="@style/text_normal"
+            android:layout_alignBottom="@id/iv_news"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@id/tv_count"
+            tools:text="好评100%"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/text_normal"
+            android:layout_above="@id/tv_count"
+            android:layout_toRightOf="@id/iv_news"
+            android:textColor="@color/red_FF"
+            android:textSize="@dimen/text_18"
+            tools:text="￥112.00"/>
+
+    </RelativeLayout>
+</layout>

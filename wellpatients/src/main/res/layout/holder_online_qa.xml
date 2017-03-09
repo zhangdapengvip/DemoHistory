@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/selector_llistview_transparent"
+              android:paddingBottom="@dimen/dimen_4"
+              android:paddingLeft="@dimen/dimen_10"
+              android:paddingRight="@dimen/dimen_10"
+              android:paddingTop="@dimen/dimen_4">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_corner10"
+        android:padding="@dimen/dimen_5">
+
+        <com.zero.library.base.view.RecyclableImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dimen_60"
+            android:layout_height="@dimen/dimen_60"/>
+
+        <TextView
+            android:id="@+id/tv_cotent"
+            style="@style/text_normal"
+            android:layout_toRightOf="@id/iv_head"
+            android:gravity="start"
+            android:paddingLeft="@dimen/dimen_5"
+            tools:text="@string/test_string"/>
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/text_color_normal"
+            android:layout_below="@id/tv_cotent"
+            android:layout_marginTop="@dimen/dimen_1"
+            android:layout_toRightOf="@id/iv_head"
+            android:gravity="start"
+            android:paddingLeft="@dimen/dimen_5"
+            tools:text="@string/test_string"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/text_normal"
+            android:layout_alignBottom="@id/tv_name"
+            android:layout_marginLeft="@dimen/dimen_15"
+            android:layout_toRightOf="@id/tv_name"
+            android:singleLine="true"
+            tools:text="@string/test_string"
+            android:textColor="@color/bg_text_lable"
+            android:textSize="@dimen/text_13"/>
+
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/text_normal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dimen_5"
+            android:layout_toRightOf="@id/iv_head"
+            android:paddingLeft="@dimen/dimen_5"
+            android:singleLine="true"
+            tools:text="@string/test_string"
+            android:textColor="@color/bg_text_lable"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/text_normal"
+            android:layout_alignBottom="@id/tv_date"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_toRightOf="@id/tv_date"
+            android:singleLine="true"
+            tools:text="@string/test_string"
+            android:textColor="@color/bg_text_lable"/>
+
+        <TextView
+            android:id="@+id/tv_online_ing"
+            style="@style/text_padding_normal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_btn_online"
+            android:text="@string/label_online_ing"
+            android:textColor="@color/red_FF"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

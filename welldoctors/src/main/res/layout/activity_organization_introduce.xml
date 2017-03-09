@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_background_color"
+              android:orientation="vertical">
+
+    <com.zero.library.base.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    
+    <include layout="@layout/include_webview"/>
+
+    <TextView
+        android:id="@+id/tv_ask_help"
+        style="@style/btn_normal_largesize"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/dimen_5"
+        android:background="@drawable/bg_btn_normal"
+        android:text="@string/btn_ask_help"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_white_corner10"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/app_dialog_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen_10">
+    </LinearLayout>
+
+    <View
+        android:id="@+id/app_dialog_main_btn_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/default_dlg_split_line_color"/>
+
+    <LinearLayout
+        android:id="@+id/app_dialog_two_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_45">
+
+        <Button
+            android:id="@+id/app_dialog_left_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_empty_dlg_left"
+            android:text="@string/cancel"
+            android:textColor="@color/selector_dlg_btn_text_color"
+            android:textSize="@dimen/default_alert_dlg_btn_size"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/default_dlg_split_line_color"/>
+
+        <Button
+            android:id="@+id/app_dialog_right_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_empty_dlg_right"
+            android:text="@string/ok"
+            android:textColor="@color/selector_dlg_btn_text_color"
+            android:textSize="@dimen/default_alert_dlg_btn_size"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/app_dialog_one_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_btn_empty_dlg_one"
+        android:text="@string/ok"
+        android:textColor="@color/selector_dlg_btn_text_color"
+        android:textSize="@dimen/default_alert_dlg_btn_size"
+        android:visibility="gone"/>
+
+</LinearLayout>

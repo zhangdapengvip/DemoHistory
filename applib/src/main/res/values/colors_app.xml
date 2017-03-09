@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_app_text_color">#00a0e9</color>
+    <color name="bg_text_normal">@color/gray_33</color>
+    <color name="bg_text_hint">@color/gray_A0</color>
+    <color name="bg_text_lable">@color/gray_77</color>
+    <color name="color_maintab_normal">#303D44</color>
+    <color name="color_normal_button">#00a0e9</color>
+</resources>

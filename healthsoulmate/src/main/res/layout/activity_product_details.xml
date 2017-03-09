@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <com.zero.library.base.view.TitleBarView
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.zero.library.base.view.CustomViewPager
+            android:id="@+id/pager_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <include layout="@layout/include_line_simple"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/btn_addto_cart"
+                style="@style/btn_normal"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_red_btn"
+                android:paddingBottom="@dimen/dimen_12"
+                android:paddingTop="@dimen/dimen_12"
+                android:text="加入购物车"
+                android:textColor="@color/white"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/btn_addto_cart"
+                android:layout_alignTop="@id/btn_addto_cart"
+                android:layout_toLeftOf="@id/btn_addto_cart"
+                android:paddingLeft="@dimen/dimen_20"
+                android:paddingRight="@dimen/dimen_20">
+
+                <TextView
+                    android:id="@+id/tv_cart"
+                    style="@style/text_normal"
+                    android:layout_centerVertical="true"
+                    android:drawableTop="@drawable/selector_tab_shopping"
+                    android:text="购物车"
+                    android:textSize="@dimen/text_12"/>
+
+                <TextView
+                    android:id="@+id/tv_cart_count"
+                    style="@style/text_normal"
+                    android:layout_height="@dimen/text_14"
+                    android:layout_alignRight="@id/tv_cart"
+                    android:background="@drawable/bg_red_dot"
+                    android:minEms="1"
+                    android:paddingLeft="@dimen/dimen_2"
+                    android:paddingRight="@dimen/dimen_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_10"
+                    android:visibility="gone"
+                    tools:text="99+"
+                    tools:visibility="visible"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

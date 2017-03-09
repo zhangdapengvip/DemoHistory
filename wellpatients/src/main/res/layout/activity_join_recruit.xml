@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_background_color"
+              android:orientation="vertical">
+
+    <com.zero.library.base.view.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen_30"
+            android:paddingLeft="@dimen/dimen_10"
+            android:paddingRight="@dimen/dimen_10"
+            android:paddingTop="@dimen/dimen_30">
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_name"/>
+
+                <EditText
+                    android:id="@+id/et_user_name"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_authentication_name"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_hospital"/>
+
+                <EditText
+                    android:id="@+id/et_hospital"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_authentication_hospital"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_office"/>
+
+                <EditText
+                    android:id="@+id/et_office"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_office"
+                    android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_title"/>
+
+                <com.zero.library.base.view.AppSpinner
+                    android:id="@+id/spinner_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/input_linearlayout">
+
+                <TextView
+                    style="@style/text_padding_color"
+                    android:gravity="start"
+                    android:minEms="4"
+                    android:text="@string/label_authentication_phone"/>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/edittext_normal_padding"
+                    android:hint="@string/hint_phone"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_commit"
+                style="@style/btn_normal_largesize"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_60"
+                android:background="@drawable/bg_btn_normal"
+                android:text="@string/commit"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView
+    android:id="@+id/lv_items"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_background_color"
+    android:divider="@drawable/bg_line_simple"
+    android:scrollbarThumbVertical="@drawable/ic_scroll_vertical"/>

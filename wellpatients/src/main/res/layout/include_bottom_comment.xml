@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout android:id="@+id/ll_ask_content"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/color_normal_button"
+              android:orientation="horizontal"
+              android:padding="@dimen/dimen_5">
+
+
+    <EditText
+        android:id="@+id/et_comment"
+        style="@style/edittext_normal_padding"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_edittext_line_4"
+        android:maxHeight="@dimen/dimen_65"
+        android:paddingBottom="@dimen/dimen_8"
+        android:paddingTop="@dimen/dimen_8"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/et_upper"
+        style="@style/edittext_normal_padding"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_edittext_line_4"
+        android:drawableLeft="@drawable/ic_write_left"
+        android:drawablePadding="@dimen/dimen_10"
+        android:hint="@string/hint_write_comment"
+        android:paddingBottom="@dimen/dimen_8"
+        android:paddingLeft="@dimen/dimen_10"
+        android:paddingTop="@dimen/dimen_8"/>
+
+    <TextView
+        android:id="@+id/tv_commit"
+        style="@style/text_normal"
+        android:layout_width="@dimen/dimen_60"
+        android:layout_marginLeft="@dimen/dimen_4"
+        android:background="@drawable/bg_btn_normal"
+        android:paddingBottom="@dimen/dimen_4"
+        android:paddingTop="@dimen/dimen_4"
+        android:text="@string/send"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv_look_history"
+        android:layout_width="@dimen/dimen_60"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/dimen_4"
+        android:paddingTop="@dimen/dimen_4"
+        android:src="@drawable/ic_look_commit"/>
+</LinearLayout>

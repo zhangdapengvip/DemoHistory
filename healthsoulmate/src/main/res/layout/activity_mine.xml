@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/binding_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical"
+        tools:visibility="visible">
+
+        <com.zero.library.base.view.TitleBarView
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_10">
+
+                <include layout="@layout/include_line_simple"/>
+
+                <LinearLayout
+                    android:id="@+id/label_iv_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/text_padding_normal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/label_head"
+                        android:textColor="@color/bg_text_lable"/>
+
+                    <com.zero.library.base.view.RecyclableImageView
+                        android:id="@+id/iv_head"
+                        android:layout_width="@dimen/dimen_45"
+                        android:layout_height="@dimen/dimen_45"
+                        android:layout_margin="@dimen/dimen_3"/>
+
+                    <TextView
+                        style="@style/text_padding_normal"
+                        android:drawableRight="@drawable/ic_gray_right"
+                        android:gravity="start"
+                        android:textColor="@color/bg_text_lable"/>
+                </LinearLayout>
+
+                <include layout="@layout/include_line_simple"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/text_padding_normal"
+                        android:gravity="start"
+                        android:minEms="5"
+                        android:text="@string/label_nickname"
+                        android:textColor="@color/bg_text_lable"/>
+
+                    <EditText
+                        android:id="@+id/et_nick_name"
+                        style="@style/edittext_normal_padding"
+                        android:hint="@string/hint_nickname"
+                        android:singleLine="true"/>
+                </LinearLayout>
+
+                <include layout="@layout/include_line_simple"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/text_padding_normal"
+                        android:gravity="start"
+                        android:minEms="5"
+                        android:text="@string/label_sex"
+                        android:textColor="@color/bg_text_lable"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dimen_5">
+
+                        <RadioButton
+                            android:id="@+id/cb_sex_man"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/selector_check_box_blue"
+                            android:drawablePadding="@dimen/dimen_5"
+                            android:text="男"
+                            android:textColor="@color/bg_text_normal"/>
+
+                        <RadioButton
+                            android:id="@+id/cb_sex_woman"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_20"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/selector_check_box_blue"
+                            android:drawablePadding="@dimen/dimen_5"
+                            android:text="女"
+                            android:textColor="@color/bg_text_normal"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <include layout="@layout/include_line_simple"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/text_padding_normal"
+                        android:gravity=""
+                        android:minEms="5"
+                        android:text="@string/label_birth"
+                        android:textColor="@color/bg_text_lable"/>
+
+                    <TextView
+                        android:id="@+id/tv_mine_birth"
+                        style="@style/edittext_normal_padding"
+                        android:drawableRight="@drawable/ic_gray_right"
+                        android:hint="@string/hint_birth"
+                        android:singleLine="true"/>
+                </LinearLayout>
+
+                <include layout="@layout/include_line_simple"/>
+
+                <LinearLayout
+                    android:id="@+id/label_change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_5">
+
+                    <TextView
+                        style="@style/text_padding_normal"
+                        android:layout_width="match_parent"
+                        android:drawableRight="@drawable/ic_gray_right"
+                        android:gravity="start"
+                        android:text="修改密码"
+                        android:textColor="@color/bg_text_lable"/>
+                </LinearLayout>
+
+                <include layout="@layout/include_line_simple"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/btn_logout"
+            style="@style/btn_normal"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:layout_marginTop="@dimen/dimen_30"
+            android:background="@drawable/bg_btn_normal"
+            android:text="退出登录"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+</layout>
