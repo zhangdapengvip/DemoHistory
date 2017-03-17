@@ -2,10 +2,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
 
 android {
+
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "com.yijia.patient"
+        applicationId "com.healthsoulmate.zkl"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
@@ -35,7 +36,7 @@ android {
             manifestPlaceholders = [BUILD_TYPE: "debug"]
             applicationIdSuffix ""
             shrinkResources false
-            signingConfig signingConfigs.release
+            //signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -58,8 +59,7 @@ android {
         }
     }
     productFlavors {
-        dev {}
-        aliyun {}
+        devhealth {}
     }
     productFlavors.all { flavor ->
         flavor.manifestPlaceholders = [channel: name]
@@ -77,10 +77,13 @@ android {
         preDexLibraries = false
         javaMaxHeapSize "4g"   //运行内存
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':applib')
+    compile project(':History_Lib:bindinglib')
     compile 'junit:junit:4.12'
 }

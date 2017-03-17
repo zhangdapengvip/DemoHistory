@@ -6,7 +6,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "com.healthsoulmate.zkl"
+        applicationId "com.yijia.zkl"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
@@ -36,7 +36,7 @@ android {
             manifestPlaceholders = [BUILD_TYPE: "debug"]
             applicationIdSuffix ""
             shrinkResources false
-            //signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -59,7 +59,8 @@ android {
         }
     }
     productFlavors {
-        devhealth {}
+        dev {}
+        aliyun {}
     }
     productFlavors.all { flavor ->
         flavor.manifestPlaceholders = [channel: name]
@@ -77,13 +78,10 @@ android {
         preDexLibraries = false
         javaMaxHeapSize "4g"   //运行内存
     }
-    dataBinding {
-        enabled = true
-    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':bindinglib')
+    compile project(':History_Lib:applib')
     compile 'junit:junit:4.12'
 }
