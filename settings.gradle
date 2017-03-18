@@ -1,9 +1,16 @@
-include ':History_Lib:demoprinter'
-include ':History_Lib:paylib'
-include ':History_Lib:demohttp'
-include ':History_Lib:AdaptationApp'
+/*--------start history lib--------*/
+//include ':History_Lib:demoprinter'
+//include ':History_Lib:paylib'
+//include ':History_Lib:demohttp'
+//include ':History_Lib:AdaptationApp'
 include ':History_Lib:applib'
-include ':History_Lib:welldoctors'
-include ':History_Lib:wellpatients'
-include ':History_Lib:bindinglib'
-include ':History_Lib:healthsoulmate'
+//include ':History_Lib:welldoctors'
+//include ':History_Lib:wellpatients'
+//include ':History_Lib:bindinglib'
+//include ':History_Lib:healthsoulmate'
+/*--------end history lib--------*/
+
+
+/*--------start retrofit lib--------*/
+include ':Common_Lib:retrofit'
+/*--------end retrofit lib--------*/

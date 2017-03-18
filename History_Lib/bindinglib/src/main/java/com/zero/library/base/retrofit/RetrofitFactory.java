@@ -1,6 +1,8 @@
 package com.zero.library.base.retrofit;
 
 
+import android.text.TextUtils;
+
 import com.zero.library.base.constants.AppConstants;
 import com.zero.library.base.manager.PropertyManager;
 import com.zero.library.base.utils.UtilsBase64;
@@ -37,7 +39,7 @@ public class RetrofitFactory {
                 PropertyManager.logEnable() ?
                         HttpLoggingInterceptor.Level.BODY :
                         HttpLoggingInterceptor.Level.NONE);
-        Interceptor interceptor = new Interceptor() {
+        Interceptor requestInterceptor = new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request();
