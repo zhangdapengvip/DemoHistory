@@ -4,7 +4,7 @@
 //include ':History_Lib:demohttp'
 //include ':History_Lib:AdaptationApp'
 include ':History_Lib:applib'
-//include ':History_Lib:welldoctors'
+include ':History_Lib:welldoctors'
 //include ':History_Lib:wellpatients'
 //include ':History_Lib:bindinglib'
 //include ':History_Lib:healthsoulmate'

@@ -13,20 +13,6 @@ android {
         versionName rootProject.ext.versionName
     }
 
-    signingConfigs {
-        preview {
-            storeFile file(RELEASE_STORE_FILE)
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
-        }
-        release {
-            storeFile file(RELEASE_STORE_FILE)
-            storePassword RELEASE_STORE_PASSWORD
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
-        }
-    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -36,7 +22,6 @@ android {
             manifestPlaceholders = [BUILD_TYPE: "debug"]
             applicationIdSuffix ""
             shrinkResources false
-            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -45,7 +30,6 @@ android {
             // 设置applicationId为包名+applicationIdSuffix
             applicationIdSuffix ""
             shrinkResources true
-            signingConfig signingConfigs.preview
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -53,7 +37,6 @@ android {
             manifestPlaceholders = [BUILD_TYPE: "release"]
             applicationIdSuffix ""
             shrinkResources true
-            signingConfig signingConfigs.release
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
